@@ -1,0 +1,49 @@
+body{
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: black;
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+    color: black;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){
+    background-color: #dddddd;
+}
+
+.newsPanel{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.newsPanel a{
+    text-decoration: none;
+    border-bottom: #333 1px solid;
+    padding: 12px;
+    background-color: transparent;
+    color: black;
+}
+
+.newsPanel a:hover{
+    background-color: #333;
+    color: white;
+}
