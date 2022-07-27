@@ -48,7 +48,7 @@ body{
   padding: 11px 20px;
   margin: 14px 16px;
   margin-left: 96px;
-  width: 300px;
+  width: 30%;
   border: 1px black solid;
 
 }
@@ -173,7 +173,7 @@ ul {
 }
 
 .signInButton {
-  position: absolute;
+  position: fixed;
   width: auto; 
   float: right; 
   right: 0;
@@ -182,6 +182,7 @@ ul {
   background: var(--orange-);
   border: none;
   color: white;
+  z-index: 3;
 }
 
 .homePageButton {
@@ -208,6 +209,19 @@ ul {
   opacity: 1;
   right: 0;
 }
+.registerButton{
+    background: none;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 0px;
+    font-size: 18px;
+    position: fixed;
+    top: 25px;
+    right: 100px;
+    border: none;
+    z-index: 3;
+}
 
 .profileButton {
     background-color: var(--orange-);
@@ -219,10 +233,12 @@ ul {
     text-align: center;
     margin: 9px;
     font-size: 24px;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     border: none;
+    border: 1px solid #000;
+    z-index: 3;
 }
 
 .profileButton:hover{
@@ -239,12 +255,12 @@ ul {
   background-color: #333;
   color: white;
   width: 175px;
-  height: 150px;
+  height: 200px;
   right: 30px;
   top: 80px;
   position: fixed;
   display: none;
-  
+  z-index: 3;
 }
 
 .profileBox ul{
@@ -255,7 +271,7 @@ ul {
   color: white;
   font-size: 18px;
   text-align: center;
-  top: 30%;
+  top: 0;
 }
 
 .profileBox ul a, .profileBox ul button{
@@ -491,6 +507,7 @@ span.psw {
   background-color: #333;
   z-index: 1;
   width: 100%;
+  position: fixed;
 }
 
 .topnav a {
@@ -527,34 +544,9 @@ span.psw {
   text-align: center;
 }
 
-@media screen and (max-width: 500px){
-  /* .topnav a{display: none;} */
-  .bottomNav{
-      display: flex;
-      flex-direction: row;
-  }
 
-  .sideContainer{
-    display: none;
-  }
 
-  .search{
-    width: 170px;
-    margin-left: 0;
-  }
 
-  #searchButton{
-    padding: 2px 8px;
-    
-    
-  }
-
-  .profileButton{
-    width: 45px;
-    height: 45px;
-    margin: 12px;
-  }
-}
 
 @media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
@@ -643,4 +635,71 @@ li input:hover:not(.active), li a:hover:not(.active), li button:hover:not(.activ
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.SearchResultButton{
+    position: relative;
+    background: rgb(96, 96, 96);
+    border: none;
+    color: white;
+    margin: 0 auto;
+    text-decoration: none;
+    padding: 32px 16px;
+    margin: 0;
+    width: 100%;
+    height: 260px;
+    left: 180px;
+    transition: all 200ms;
+    border-bottom: #333 2px solid;
+
+}
+
+.SearchResultButton:hover{    
+    background-color: var(--orange-);
+    color: white;
+    cursor: pointer;
+   
+}
+
+.searchResultContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 67px;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 500px){
+  /* .topnav a{display: none;} */
+  .bottomNav{
+      display: flex;
+      flex-direction: row;
+  }
+
+  .sideContainer{
+    display: none;
+  }
+
+  .search{
+    width: 170px;
+    margin-left: 0;
+  }
+
+  #searchButton{
+    padding: 2px 8px;
+    
+    
+  }
+
+  .profileButton{
+    width: 45px;
+    height: 45px;
+    margin: 12px;
+  }
+  
+  .SearchResultButton{
+        left: 0;
+        width: 100%;
+        height: 280px;
+  }
 }
